@@ -11,6 +11,9 @@ sudo: false
 
 cache: bundler
 
+script:
+- ./scripts/cibuild
+
 notifications:
   email:
     recipients:
