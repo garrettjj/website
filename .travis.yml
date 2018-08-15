@@ -1,0 +1,21 @@
+language: ruby
+rvm:
+  - 2.4.1
+
+before_script:
+  - chmod +x ./script/cibuild
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
+sudo: false
+
+cache: bundler
+
+notifications:
+  email:
+    recipients:
+      - garrett@jansen.sh
+    on_success: never
+    on_failure: always
