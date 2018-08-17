@@ -13,7 +13,7 @@ sudo: false
 
 cache: bundler
 
-script: ./scripts/cibuild.sh
+script: sh ./scripts/cibuild.sh
 
 notifications:
   email:
