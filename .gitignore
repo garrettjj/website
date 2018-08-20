@@ -5,3 +5,4 @@ Gemfile.lock
 # Temporary site testing #
 ##########################
 _site
+.sass-cache
