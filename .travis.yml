@@ -3,7 +3,7 @@ rvm:
 - 2.4.1
 
 before_script:
-- chmod +x ./scripts/cibuild.sh
+- chmod +x _scripts/build.sh
 
 env:
   global:
@@ -13,7 +13,7 @@ sudo: false
 
 cache: bundler
 
-script: sh ./scripts/cibuild.sh
+script: sh _scripts/build.sh
 
 notifications:
   email:
