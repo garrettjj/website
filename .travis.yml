@@ -7,9 +7,20 @@ install:
   - gem install jekyll
   - gem install html-proofer
   
+branches:
+  only:
+    - master
+
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
+notifications:
+  email:
+    recipients:
+      - garrett@jansen.sh
+    on_success: never
+    on_failure: always
 
 sudo: false
 
@@ -18,10 +29,3 @@ cache: bundler
 script: 
   - chmod +x _scripts/build.sh
   - sh _scripts/build.sh
-
-notifications:
-  email:
-    recipients:
-      - garrett@jansen.sh
-    on_success: never
-    on_failure: always
