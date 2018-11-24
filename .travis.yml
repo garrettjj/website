@@ -30,3 +30,6 @@ cache: bundler
 script:
 - chmod +x _scripts/build.sh
 - sh _scripts/build.sh
+after_success:
+- chmod +x _scripts/deploy.sh
+- sh _scripts/deploy.sh
