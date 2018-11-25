@@ -1,4 +1,4 @@
-#/bin/bash
+#!/usr/bin/env bash
 
 # Assorted troubleshooting of Travis errors
 ls -larth /home/travis/build/garrettjj/website/
