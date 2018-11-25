@@ -28,8 +28,9 @@ notifications:
 sudo: false
 cache: bundler
 before_script:
-- chmod +x ./_scripts/build.sh
-script: _scripts/build.sh
+- cd $TRAVIS_BUILD_DIR
+- chmod +x _scripts/build.sh
+script: bash _scripts/build.sh
 deploy:
 - provider: script
   skip_cleanup: true
