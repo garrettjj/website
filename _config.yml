@@ -57,7 +57,7 @@ defaults:
 
 # Serving
       url: "https://blog.jansen.sh"
-      baseurl: "https://blog.jansen.sh"
+      baseurl: ""
 
 # Includes
 include: ["_pages"]
