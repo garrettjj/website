@@ -2,10 +2,10 @@
 name: Garrett Jansen
 job_title: Security, Linux and the Cloud
 email: garrett@jansen.sh
-description: I work to build a better internet for all. 
+description: I work to build a better internet for all. Currently, Applications Administrator for IPsoft and Cybersecurity (Cyberterrorism focus) Graduate student at Wilmington University. All opinions are my own.
 avatar: /assets/img/avatar.jpg
 favicon: /favicon.ico
-twitter_handler: your_handler
+twitter_handler: slavexstate 
 analytics_code: UA-XXXXXXX-2
 disqus: your_disqus_site
 
@@ -42,7 +42,7 @@ show_categories: 1
 show_tags: 1
 show_email: 1
 show_rss: 1
-show_comments: 1
+show_comments: 0
 show_menu: 1
 fixed_sidebar: 1
 
