@@ -56,8 +56,8 @@ defaults:
       comments: "true"
 
 # Serving
-      url: "https://blog.jansen.sh"
-      baseurl: ""
+url: "https://blog.jansen.sh"
+baseurl: ""
 
 # Includes
 include: ["_pages"]
