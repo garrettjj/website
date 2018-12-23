@@ -3,7 +3,8 @@ layout: post
 date: 2018-12-20 23:56
 title:  "Blogging with Jekyll"
 category: 
-- docs
+- jekyll
+- guide
 ---
 
 While I've been a bit cautious about starting this and it's taken quite longer than intended, everything has to start somewhere so I might as well kick it off here. Bringing up a blog was something that's been on my mind for a bit as a means of collecting thoughts and finding ways to best discuss the projects that I'm working on in my personal time although I wanted to make sure that I put in a little bit of work and was able to do it the right way.
@@ -44,4 +45,13 @@ script: bash _scripts/build.sh
 
 The biggest roadblock along the way was something as innocuous as the change directory command in the before_script section. Without it, nothing was being generated and I wasn't sure why. After reviewing some of the error outputs, I was able to catch the simple mistake, toss in the correct entry and then get us rolling.
 
-Finally, we just had to create a script that utilized the environment created by Travis-CI and use it to compile our site so it can be prepared for moving out. 
+Finally, I just had to create a script that utilized the environment created by Travis-CI and use it to compile our site so it can be prepared for moving out. As seen above, there's a small shell script located in the `_scripts` directory that contains the magic incantation to make Jekyll come together. I opted out of using a single command in the Jekyll file largely to maintain a bit of flexibility and roll in small quality-of-life improvements like <a href="https://github.com/gjtorikian/html-proofer">HTML-Proofer</a>. If I want to modify the build process, I can simply update the shell script and not need to create a sprawling .travis.yml file. 
+
+{% highlight bash linenos %}
+#!/usr/bin/env bash
+set -e
+
+bundle exec jekyll build
+{% endhighlight %}
+
+This makes a relatively easy compiler that runs on Travis-CI, enabling me to commit new posts as markdown files that rebuild the entire site. I'll touch a bit more on the magic that facilitates the push out to my webserver in another post so I can keep this simple. Until then.
