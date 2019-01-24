@@ -1,4 +1,4 @@
-<F22>---
+---
 layout: post
 date: 2019-01-24 10:00
 title:  "Reading list 1/24/2019"
