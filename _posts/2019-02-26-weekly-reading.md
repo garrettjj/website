@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2019-02-26 00:00
-title:  "Closing Out February With Reading"
+title:  "Closing Out February With Some Reading"
 category: 
 - reading-list
 ---
