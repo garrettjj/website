@@ -79,3 +79,5 @@ sass:
   sass_dir: assets/partials
   style: compressed
 
+responsive_image:
+  template: _includes/picture.html
