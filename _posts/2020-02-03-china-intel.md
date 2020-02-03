@@ -22,9 +22,15 @@ While there is no current news pertaining to war, there is the potential for an 
 **Citations:**
 
 Al Jazeera. (2020, January 25). China expands coronavirus outbreak lockdown to 56 million people. https://www.aljazeera.com/news/2020/01/china-expands-coronavirus-outbreak-lockdown-fast-tracks-hospital-200124201635848.html
+
 Bloomberg News. (2020, January 20). China Will Rack Up Three Billion Trips During World’s Biggest Human Migration. Bloomberg.Com. https://www.bloomberg.com/news/articles/2020-01-20/china-readies-for-world-s-biggest-human-migration-quicktake
+
 Bostock, B. (2020, January 24). The Wuhan coronavirus has hit Xinjiang, where China has imprisoned at least 1 million Uighur Muslims. Its filthy detention camps will make inmates sitting ducks. Business Insider. https://www.businessinsider.com/wuhan-coronavirus-xinjiang-uighur-squalid-detention-camps-2020-1
+
 Domm, P. (2020, January 23). History shows China’s coronavirus impact on markets likely to be short-lived. CNBC. https://www.cnbc.com/2020/01/23/chinas-coronavirus-will-be-a-negative-for-some-markets-until-it-stops.html
+
 Johnson, C. Y. (2020, January 24). Scientists are unraveling the Chinese coronavirus with unprecedented speed and openness. Washington Post. https://www.washingtonpost.com/science/2020/01/24/scientists-are-unraveling-chinese-coronavirus-with-unprecedented-speed-openness/
+
 Larsen, K. (2020, January 22). The strange tale of the paid protesters supporting Meng Wanzhou at her extradition hearing | CBC News. CBC. https://www.cbc.ca/news/canada/british-columbia/paid-protesters-meng-wanzhou-1.5434613
+
 Tierney, L., Meko, T., & Fox, J. (2020, January 26). Mapping the spread of the new coronavirus. Washington Post. https://www.washingtonpost.com/world/2020/01/22/mapping-spread-new-coronavirus/
