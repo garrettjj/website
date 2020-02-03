@@ -31,6 +31,6 @@ Domm, P. (2020, January 23). History shows China’s coronavirus impact on marke
 
 Johnson, C. Y. (2020, January 24). Scientists are unraveling the Chinese coronavirus with unprecedented speed and openness. Washington Post. <https://www.washingtonpost.com/science/2020/01/24/scientists-are-unraveling-chinese-coronavirus-with-unprecedented-speed-openness/>
 
-Larsen, K. (2020, January 22). The strange tale of the paid protesters supporting Meng Wanzhou at her extradition hearing | CBC News. CBC. <https://www.cbc.ca/news/canada/british-columbia/paid-protesters-meng-wanzhou-1.5434613>
+Larsen, K. (2020, January 22). The strange tale of the paid protesters supporting Meng Wanzhou at her extradition hearing. CBC News. CBC. <https://www.cbc.ca/news/canada/british-columbia/paid-protesters-meng-wanzhou-1.5434613>
 
 Tierney, L., Meko, T., & Fox, J. (2020, January 26). Mapping the spread of the new coronavirus. Washington Post. <https://www.washingtonpost.com/world/2020/01/22/mapping-spread-new-coronavirus/>
