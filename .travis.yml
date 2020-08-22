@@ -1,8 +1,6 @@
 language: ruby
 rvm:
 - 2.4.1
-addons:
-  ssh_known_hosts: web001.infra.jansen.sh
 before_install:
 - openssl aes-256-cbc -K $encrypted_dc7da2cdae2e_key -iv $encrypted_dc7da2cdae2e_iv
   -in deploy_rsa.enc -out /tmp/deploy_rsa -d
@@ -15,6 +13,7 @@ install:
 - gem install html-proofer
 - gem install rmagick
 - gem install jekyll-responsive-image
+- echo 'web001.infra.jansen.sh,128.199.2.247 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGT12vFcTyldXTK3GFKC/AwT0Py+x8h5mFrBISVzc4F0qfSYF4Xik1UycCn5M9ruGfpWwnNjtQho041Azm7vyck=' >> $HOME/.ssh/known_hosts
 branches:
   only:
   - master
