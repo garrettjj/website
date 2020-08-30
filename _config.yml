@@ -56,7 +56,7 @@ defaults:
       comments: "true"
 
 # Serving
-url: "https://blog.jansen.sh"
+url: "https://jansen.sh"
 baseurl: ""
 
 # Includes
