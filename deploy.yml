@@ -1,0 +1,49 @@
+---
+- name: Deploying website updates
+  hosts: all
+  user: root
+
+  tasks:
+  - name: Pull website repo updates
+    git:
+      repo: "https://github.com/jansendotsh/website.git"
+      dest: "/data/blog"
+      version: master
+      update: yes
+
+  - name: Create Gemfile.lock file
+    file:
+      path: /data/blog/Gemfile.lock
+      owner: deploy
+      group: deploy
+      mode: '0666'
+
+  - name: Create compiled blog directory
+    file:
+      path: /data/blog/_site
+      owner: deploy
+      group: deploy
+      mode: '0666'
+      state: directory
+
+  - name: Deleting Jekyll image with ImageMagick
+    docker_image:
+      name: jekyll
+      tag: "build"
+      state: absent
+
+  - name: Building Jekyll image with ImageMagick
+    docker_image:
+      name: jekyll
+      tag: "build"
+      build:
+        path: /data/blog
+        pull: yes
+      source: build
+      state: present
+
+  - name: Generate Gemfile.lock
+    shell: docker run --rm --volume="/data/blog:/srv/jekyll" -it jekyll:build bundle update
+
+  - name: Build blog
+    shell: docker run --rm --volume="/data/blog:/srv/jekyll" -it jekyll:build jekyll build
