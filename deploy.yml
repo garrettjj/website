@@ -7,20 +7,20 @@
   - name: Pull website repo updates
     git:
       repo: "https://github.com/jansendotsh/website.git"
-      dest: "/data/blog"
+      dest: "/usr/share/nginx/blog"
       version: master
       update: yes
 
   - name: Create Gemfile.lock file
     file:
-      path: /data/blog/Gemfile.lock
+      path: /usr/share/nginx/blog/Gemfile.lock
       owner: deploy
       group: deploy
       mode: '0666'
 
   - name: Create compiled blog directory
     file:
-      path: /data/blog/_site
+      path: /usr/share/nginx/blog/_site
       owner: deploy
       group: deploy
       mode: '0666'
@@ -37,13 +37,13 @@
       name: jekyll
       tag: "build"
       build:
-        path: /data/blog
+        path: /usr/share/nginx/blog
         pull: yes
       source: build
       state: present
 
   - name: Generate Gemfile.lock
-    shell: docker run --rm --volume="/data/blog:/srv/jekyll" -it jekyll:build bundle update
+    shell: docker run --rm --volume="/usr/share/nginx/blog:/srv/jekyll" -it jekyll:build bundle update
 
   - name: Build blog
-    shell: docker run --rm --volume="/data/blog:/srv/jekyll" -it jekyll:build jekyll build
+    shell: docker run --rm --volume="/usr/share/nginx/blog:/srv/jekyll" -it jekyll:build jekyll build
