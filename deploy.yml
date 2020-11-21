@@ -4,26 +4,34 @@
   user: root
 
   tasks:
+  - name: Verify folder is present for blog content
+    file:
+      path: /data/blog
+      state: directory
+      owner: "deploy"
+      mode: '0755'
+
   - name: Pull website repo updates
     git:
       repo: "https://github.com/jansendotsh/website.git"
-      dest: "/usr/share/nginx/blog"
+      dest: "/data/blog"
       version: master
       update: yes
 
   - name: Create Gemfile.lock file
     file:
-      path: /usr/share/nginx/blog/Gemfile.lock
+      path: /data/blog/Gemfile.lock
       owner: deploy
       group: deploy
       mode: '0666'
+      state: touch
 
   - name: Create compiled blog directory
     file:
-      path: /usr/share/nginx/blog/_site
+      path: /data/blog/_site
       owner: deploy
       group: deploy
-      mode: '0666'
+      mode: '0755'
       state: directory
 
   - name: Deleting Jekyll image with ImageMagick
@@ -37,13 +45,25 @@
       name: jekyll
       tag: "build"
       build:
-        path: /usr/share/nginx/blog
+        path: /data/blog
         pull: yes
       source: build
       state: present
 
   - name: Generate Gemfile.lock
-    shell: docker run --rm --volume="/usr/share/nginx/blog:/srv/jekyll" -it jekyll:build bundle update
+    shell: docker run --rm --volume="/data/blog:/srv/jekyll:Z" -it jekyll:build bundle update
 
   - name: Build blog
-    shell: docker run --rm --volume="/usr/share/nginx/blog:/srv/jekyll" -it jekyll:build jekyll build
+    shell: docker run --rm --volume="/data/blog:/srv/jekyll:Z" -it jekyll:build jekyll build
+
+  - name: Allow Nginx to access files in /data/blog/_site
+    sefcontext:
+      target: '/data/blog/_site(/.*)?'
+      setype: httpd_sys_content_t
+      state: present
+
+  - name: Change default context
+    shell: chcon -Rt httpd_sys_content_t /data/blog/_site
+
+  - name: Apply new SELinux file context in /data/blog/_site
+    shell: restorecon  -R -v /data/blog/_site
