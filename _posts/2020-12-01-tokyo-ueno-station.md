@@ -14,7 +14,7 @@ It's been overwhelming for everyone throughout the year, having to come to grips
 
 ## Recommendation 
 
-{% responsive_image path: assets/image/tokyo-ueno-station.png title: "Tokyo Ueno Station" alt: "Tokyo Ueno Station" %}
+{% responsive_image path: assets/img/tokyo-ueno-station.png title: "Tokyo Ueno Station" alt: "Tokyo Ueno Station" %}
 
 As a bit of parting, I'll share a recommendation, something I've enjoyed recently and think that you, whoever that may be, would find interesting. [Tokyo Ueno Station](https://www.goodreads.com/book/show/43398196). This is a fairly short novel, clocking in at 180 pages and can easily be read (or listened, should you prefer the audiobook) in a single sitting. The story follows a character named Kazu as it follows from his birth to his death, struggling with immense grief that doesn't let him leave Tokyo's Ueno Park. It's a clever discussion about things that are explicitly Japanese while still relaying it in a way that just makes sense globally. 
 
