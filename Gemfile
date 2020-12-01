@@ -21,4 +21,5 @@ group :jekyll_plugins do
     #gem 'wdm', '>= 0.1.0'
     gem 'html-proofer'
     gem "jekyll-responsive-image"
+    gem 'jekyll-twitter-plugin'
 end
