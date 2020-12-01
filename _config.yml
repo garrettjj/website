@@ -2,10 +2,10 @@
 name: Garrett Jansen
 job_title: Security, Linux and the Cloud
 email: garrett@jansen.sh
-description: I work to build a better internet for all. Currently, Senior Developer Support Engineer at DigitalOcean and Cybersecurity Graduate student with a Cyberterrorism focus at Wilmington University. All opinions are my own.
+description: I work to build a better internet for all. Currently, CloudOps Administrator at DigitalOcean and Cybersecurity Graduate student with a Cyberterrorism focus at Wilmington University. All opinions are my own.
 avatar: /assets/img/avatar.jpg
 favicon: /favicon.ico
-twitter_handler: slavexstate 
+twitter_handler: jansendotsh 
 analytics_code: UA-XXXXXXX-2
 disqus: your_disqus_site
 
@@ -79,5 +79,8 @@ sass:
   sass_dir: assets/partials
   style: compressed
 
+# Plugins
 responsive_image:
   template: _includes/picture.html
+
+plugins: ['jekyll-twitter-plugin']
