@@ -82,5 +82,3 @@ sass:
 # Plugins
 responsive_image:
   template: _includes/picture.html
-
-plugins: ['jekyll-twitter-plugin']
