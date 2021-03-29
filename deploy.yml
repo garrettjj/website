@@ -4,6 +4,11 @@
   user: root
 
   tasks:
+  - name: Put SELinux in permissive mode, logging actions that would be blocked.
+    ansible.posix.selinux:
+      policy: targeted
+      state: permissive
+
   - name: Verify folder is present for blog content
     file:
       path: /data/blog
@@ -67,3 +72,8 @@
 
   - name: Apply new SELinux file context in /data/blog/_site
     shell: restorecon  -R -v /data/blog/_site
+
+  - name: Enable SELinux
+    ansible.posix.selinux:
+      policy: targeted
+      state: enforcing
